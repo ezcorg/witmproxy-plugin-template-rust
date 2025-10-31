@@ -1,0 +1,15 @@
+[template]
+cargo_generate_version = ">=0.10.0"
+
+[placeholders.project-name]
+type = "string"
+prompt = "What is your plugin name?"
+
+[placeholders.description]
+type = "string"
+prompt = "What does your plugin do?"
+default = "A witmproxy plugin"
+
+[placeholders.author]
+type = "string"
+prompt = "Who is the author?"
