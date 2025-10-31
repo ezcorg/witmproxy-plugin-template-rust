@@ -18,9 +18,8 @@ After building, the plugin can be installed in witmproxy by running `cargo plugi
 
 This plugin was generated from the witmproxy Rust plugin template with the following variables:
 
-- **Project Name**: {{project-name}}
-- **Namespace**: {{namespace}}
-- **Authors**: {{authors}}
+- **Plugin Name**: {{plugin-name}}
+- **Authors**: {{author}}
 - **Description**: {{description}}
 
 ## Customization
