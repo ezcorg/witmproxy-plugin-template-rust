@@ -5,6 +5,8 @@ wit_bindgen::generate!({
     generate_all
 });
 
+const PUBLIC_KEY_BYTES: &[u8] = include_bytes!("../key.public");
+
 struct Plugin;
 
 impl Guest for Plugin {
@@ -23,7 +25,7 @@ impl Guest for Plugin {
             cel: "true".to_string(),
             license: "MIT".to_string(),
             url: "https://example.com".to_string(),
-            publickey: "todo".to_string(),
+            publickey: PUBLIC_KEY_BYTES.to_vec(),
         }
     }
 
