@@ -7,12 +7,12 @@
 To build this plugin:
 
 ```bash
-cargo build --release --target wasm32-wasip2
+make
 ```
 
 ## Installation
 
-After building, the plugin can be installed in witmproxy by running `cargo plugin add <path-to-wasm-file>`.
+After building, the plugin can be installed in witmproxy by running `witm plugin add <path-to-wasm-file>`.
 
 ## Template Variables
 

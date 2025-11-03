@@ -42,7 +42,7 @@ interface witm-plugin {
         description: string,
         license: string,
         url: string,
-        publickey: string,
+        publickey: list<u8>,
         cel: string,
         capabilities: list<string>,
         metadata: list<tag>,
