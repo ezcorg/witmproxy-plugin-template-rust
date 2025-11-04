@@ -9,7 +9,7 @@ key.secret key.public: wasmsign
 
 all: key.secret key.public
 	cargo build --release --target wasm32-wasip2
-	wasmsign2 sign -i ./target/wasm32-wasip2/release/{{project-name}}.wasm -o ./target/wasm32-wasip2/release/{{project-name}}.signed.wasm -k key.secret
+	wasmsign2 sign -i ./target/wasm32-wasip2/release/{{project-name | replace: "-", "_"}}.wasm -o ./target/wasm32-wasip2/release/{{project-name | replace: "-", "_"}}.signed.wasm -k key.secret
 
 clean:
 	cargo clean --target wasm32-wasip2
