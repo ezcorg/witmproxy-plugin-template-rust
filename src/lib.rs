@@ -18,11 +18,17 @@ impl Guest for Plugin {
             version: "0.0.0".to_string(),
             description: "{{description}}".to_string(),
             metadata: vec![],
-            capabilities: vec![
-                "request".to_string(),
-                "response".to_string(),
-            ],
-            cel: "true".to_string(),
+            capabilities: Capabilities {
+                connect: ConnectCapability {
+                    filter: "true".to_string(),
+                },
+                request: Some(RequestCapability {
+                    filter: "true".to_string(),
+                }),
+                response: Some(ResponseCapability {
+                    filter: "true".to_string(),
+                }),
+            },
             license: "MIT".to_string(),
             url: "https://example.com".to_string(),
             publickey: PUBLIC_KEY_BYTES.to_vec(),
