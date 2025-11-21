@@ -1,4 +1,4 @@
-use crate::{exports::witmproxy::plugin::witm_plugin::{CapabilityProvider, Guest, HandleRequestResult, HandleResponseResult, Request, Response, PluginManifest}};
+use crate::{exports::witmproxy::plugin::witm_plugin::{CapabilityProvider, Guest, HandleRequestResult, HandleResponseResult, PluginManifest, Request, Response}, witmproxy::plugin::capabilities::{Capabilities, ConnectCapability, RequestCapability, ResponseCapability}};
 
 wit_bindgen::generate!({
     world: "witmproxy:plugin/plugin",
