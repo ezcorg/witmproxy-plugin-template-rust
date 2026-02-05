@@ -4,7 +4,12 @@
 
 ## Building
 
-To build this plugin:
+Ensure you have the `wasm32-wasip2` Rust toolchain installed:
+```bash
+rustup target add wasm32-wasip2
+```
+
+Then execute the default make target (which runs `cargo build --target wasm32-wasip2` and signs the produced WASM component):
 
 ```bash
 make
@@ -25,6 +30,6 @@ This plugin was generated from the witmproxy Rust plugin template with the follo
 ## Customization
 
 - Modify the `manifest()` function in `src/lib.rs` to update plugin metadata
-- Implement your plugin logic in the `handle_request()` and `handle_response()` functions
-- Update the `filter` CEL expressions in the `manifest()` function to specify which connections/requests/responses the plugin should process
+- Implement your plugins event handling logic in the `handle()` function
+- Update the `capabilities` in the manifest to request additional permissions to host resources or events
 - Add any additional dependencies to `Cargo.toml`
