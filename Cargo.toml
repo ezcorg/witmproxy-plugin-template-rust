@@ -9,7 +9,7 @@ description = "{{description}}"
 crate-type = ["cdylib"]
 
 [dependencies]
-wit-bindgen = "0.46.0"
+wit-bindgen = "0.54.0"
 
 [package.metadata.component]
 package = "witmproxy:{{project-name}}-plugin"
